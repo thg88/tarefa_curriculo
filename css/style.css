@@ -1,0 +1,134 @@
+body{
+    background-image: url(/images/fundo.jpg);
+    background-size: cover;
+}
+
+.page-container{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+.header-container{
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: right;
+}
+
+#check-menu{
+    display:none;
+    align-content: left;
+}
+
+.logo{
+    text-align: left;
+    grid-column: 1;
+    padding: 3px;
+}
+
+#label-menu{
+    display:none;
+}
+
+.menu-list{
+    list-style-type: none;
+    padding: 3px;
+}
+
+.nome{
+    font-size: 30px;
+    color:green;
+    display:none;
+}
+
+.profissao{
+    font-size: 20px;
+}
+.telacheia{
+    display:block;
+    font-size: 60px;
+    color: rgb(5, 94, 94);
+    letter-spacing: 5px;
+}
+
+.menu-item > a{
+    display: block;
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+    padding-left: 0px;
+    padding-right:3px;
+    padding-top: 30px;
+    padding-right: 3px;
+}
+
+.menu-item > a:hover{
+    background-color: gray;
+}
+.menu-item > a:focus{
+    color: rgb(179, 91, 91);
+}
+
+.crud-item1{
+    margin-bottom: 10px;
+    text-align: right;
+    list-style-type: none;
+
+}
+
+.crud-item{
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.crud-container{
+    grid-column: 2/13;
+    padding: 15px;
+    text-align: right;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width:500px){
+    .page-container{
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+    
+    }
+    .header-container{
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .nome{
+        font-size: 30px;
+        color: rgb(5, 94, 94);
+        display: block;
+    }
+    .cargo{
+        font-size: 25px;
+    }
+    .logo{
+        grid-column: 2;
+        text-align: center;
+    }
+    .telacheia{
+        display:none;
+    }
+    #label-menu{
+        display:flex;
+    }
+    .menu-container{
+        display:none;
+    }
+    .crud-container{
+        grid-column: 1/13;
+    }
+    #check-menu:checked ~ .menu-container{
+        display:block;
+    }
+    #check-menu:checked ~ .crud-container{
+        grid-column: 1/13;
+        display: inline;
+    }                           
+}
